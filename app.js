@@ -1,12 +1,14 @@
-var App = angular.module("App", ["ngRoute","ngResource"]);
+var App = angular.module("App", ["ngRoute"]);
 
-App.config(function ($routeProvider) {
-  $routeProvider
-    .when('/view1', {
-         templateUrl: ''
+App.config(function($routeProvider) {
+    $routeProvider
+    .when("/create/:createPage", {
+        templateUrl : "view/create.html",
+        controller : "CreateController"
     })
-    .when('/view2', {
-         templateUrl: ''
-    })
-    .otherwise({redirectTo : 'view1'});
+    .when("/report/:reportPage", {
+        templateUrl : "view/report.html",
+        controller : "ReportController"
+    });
 });
+

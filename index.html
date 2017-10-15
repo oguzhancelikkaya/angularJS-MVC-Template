@@ -13,9 +13,7 @@
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.5/angular.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.5/angular-route.min.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.5/angular-resource.min.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.5/angular-sanitize.min.js"></script>
-	
+
 	<!-- STYLE / THEME -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous" />
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flat-ui/2.3.0/css/flat-ui.min.css" />
@@ -28,15 +26,16 @@
 	<script src="controller/directives.js"></script>
 	<script src="controller/filters.js"></script>
 	
-	
-
 </head>
 <body ng-controller="MyController">
-<div class="tagsinput-primary">
-            <input name="tagsinput" class="tagsinput" data-role="tagsinput" value="School, Teacher, Colleague" style="display: none;"><div class="bootstrap-tagsinput"> <span class="tag label label-info"> Teacher<span data-role="remove"></span></span> <span class="tag label label-info"> Colleague<span data-role="remove"></span></span> <input type="text" placeholder="" style="width: 3em !important;"></div>
-          </div>
+<ul>
+	<li><a href="#!create/dictionary">Create</a></li>
+	<li><a href="#!report/guarantees">Report</a></li>
+</ul>
 
 	{{deneme}}
+	
+	<div ng-view></div>
 
 </body>
 </html>
