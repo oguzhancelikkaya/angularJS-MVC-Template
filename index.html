@@ -1,3 +1,8 @@
+<!--
+*&**********************************************************************
+*&  DEVELOPER  : OĞUZHAN ÇELİKKAYA                                     *
+*&**********************************************************************
+-->
 <!DOCTYPE html>
 <html ng-app="App">
 <head>
@@ -22,20 +27,27 @@
 	<!-- THIS APP. -->
 	<script src="app.js"></script>
 	<script src="controller/controllers.js"></script>
-	<script src="controller/services.js"></script>
 	<script src="controller/directives.js"></script>
 	<script src="controller/filters.js"></script>
+	<script src="model/model.js"></script>
 	
 </head>
 <body ng-controller="MyController">
-<ul>
-	<li><a href="#!create/dictionary">Create</a></li>
-	<li><a href="#!report/guarantees">Report</a></li>
-</ul>
 
-	{{deneme}}
+<div class="container-fluid">
+	<div class="row">
+		<div class="col-xs-3">
+			<a href="#!create/dictionary" class="btn btn-block btn-lg btn-primary">Create</a></li>
+			<a href="#!report/guarantees" class="btn btn-block btn-lg btn-primary">Report</a></li>
+		</div>
+	</div>
+
+	<my-dropdown content="drcontent" current="currentdr"></my-dropdown>
+	<my-dropdown content="drcontent2" current="currentdr2"></my-dropdown>
 	
-	<div ng-view></div>
+	{{deneme | myFilter}}
 
+	<div ng-view></div>
+</div>
 </body>
 </html>

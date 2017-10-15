@@ -11,4 +11,3 @@ App.config(function($routeProvider) {
         controller : "ReportController"
     });
 });
-
