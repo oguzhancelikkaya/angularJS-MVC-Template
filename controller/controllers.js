@@ -21,8 +21,8 @@ App.controller("CreateController",["$scope","$rootScope","$routeParams","myServi
 	}
 }]);
 
-App.controller("ReportController",["$scope","$rootScope","$routeParams",'update', function ($scope,$rootScope,$routeParams,update) {
+App.controller("ReportController",["$scope","$rootScope","$routeParams",'crud', function ($scope,$rootScope,$routeParams,crud) {
     $scope.msg = "Report " + $routeParams.reportPage;
 	$rootScope.deneme = 'Hello Report World!';
-	$scope.msg2 = update.get();
+	$scope.msg2 = crud.get();
 }]);

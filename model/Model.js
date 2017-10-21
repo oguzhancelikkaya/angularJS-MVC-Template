@@ -1,4 +1,12 @@
-App.factory('update', function($http){
+App.factory('crud', function($http,$q){
+
+    var _cancel = $q.defer();
+
+    var _canceller = function(){
+        _cancel.resolve();
+        _cancel = $q.defer();
+    }
+
 	var _get = function(){
 		//return $http.get("/getAll");
 		return "Model trial";
@@ -8,7 +16,8 @@ App.factory('update', function($http){
 	}
 	return{
 		get: _get,
-		set: _set
+		set: _set,
+		cancel : _canceller
 	};
 });
 
@@ -41,8 +50,8 @@ App.factory('myServices', function(){
 	
 	return{
 		isNotEmpty: _isNotEmpty,
-		setCookie: _setCookie,
-		getCookie: _getCookie
+		setCookie : _setCookie,
+		getCookie : _getCookie
 	};
 });
 
